@@ -7,7 +7,7 @@ declare -a files=(trainval01_blobs trainval02_blobs trainval03_blobs trainval04_
 # Create Individual Folders on the desktop to extract each of the above files
 # v1.0- is a prefix to each of the folder names  
 
-for file in "$files[@]}"; do
+for file in "${files[@]}"; do
 	mkdir /User/pramit/Desktop/v1.0-$file #Replace the path as per requirement (use pwd in terminal to find the path of your files)
 done
 
@@ -16,7 +16,7 @@ done
 # Verbose is not used during extraction
 
 echo "Extracting Files"
-for file in "$files[@]}"; do
+for file in "${files[@]}"; do
 	echo "Extracting File: $file"
 	tar -xf /User/Desktop/pramit/tgz_files/$file.tgz -C \
 		/User/Desktop/pramit/v1.0-$file/
